@@ -5,6 +5,27 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'О компании Shuft.Online — официальный дилер Shuft в Москве',
   description: 'ООО АСПРОМСИСТЕМ — официальный дилер Shuft в Москве с 2016 года. 150+ проектов, 8 лет опыта, гарантия 3 года, склад в наличии.',
+  alternates: { canonical: 'https://shuft.online/about/' },
+}
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Shuft.Online (ООО АСПРОМСИСТЕМ)',
+  url: 'https://shuft.online',
+  telephone: '+74951203375',
+  email: 'info@shuft.online',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'пл. Спартаковская, д. 14, стр. 3, пом. 3Н',
+    addressLocality: 'Москва',
+    postalCode: '105082',
+    addressCountry: 'RU',
+  },
+  foundingDate: '2016',
+  description: 'Официальный дилер Shuft в Москве. Продажа, монтаж и сервис фанкойлов, чиллеров и VRF-систем Shuft.',
+  numberOfEmployees: { '@type': 'QuantitativeValue', value: 12 },
+  areaServed: { '@type': 'City', name: 'Москва' },
 }
 
 const stats = [
@@ -37,6 +58,8 @@ const team = [
 
 export default function AboutPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'О компании' }]} />
 
@@ -134,5 +157,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

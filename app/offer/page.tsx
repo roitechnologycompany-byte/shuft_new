@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Публичная оферта | Shuft.Online',
   description: 'Публичная оферта ООО АСПРОМСИСТЕМ (Shuft.Online) на продажу климатической техники Shuft и оказание услуг по монтажу.',
+  alternates: { canonical: 'https://shuft.online/offer/' },
 }
 
 export default function OfferPage() {

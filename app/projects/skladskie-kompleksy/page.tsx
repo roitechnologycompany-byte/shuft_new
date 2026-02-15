@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Климатизация складских комплексов Москвы | Проекты Shuft',
   description: 'Проекты монтажа промышленных систем охлаждения Shuft на складах Москвы и МО. Поддержание температурного режима хранения.',
+  alternates: { canonical: 'https://shuft.online/projects/skladskie-kompleksy/' },
 }
 
 const projects = [

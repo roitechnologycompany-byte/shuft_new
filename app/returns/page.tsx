@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Возврат и обмен товара | Shuft.Online',
   description: 'Условия возврата и обмена климатической техники Shuft. 14 дней на возврат исправного товара, гарантийный обмен в течение 3 лет.',
+  alternates: { canonical: 'https://shuft.online/returns/' },
 }
 
 export default function ReturnsPage() {

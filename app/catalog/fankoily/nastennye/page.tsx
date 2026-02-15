@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Настенные фанкойлы Shuft SFH — купить в Москве | Цены 2026',
   description: 'Настенные фанкойлы Shuft SFH для офисов и квартир. Модели SFH-500, SFH-800, SFH-1200 V3. Тихие (19–26 дБА), гарантия 3 года. Доставка и монтаж за 1–3 дня.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/nastennye/' },
 }
 
 const models = [

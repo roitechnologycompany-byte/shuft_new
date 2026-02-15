@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Вентиляция Shuft — купить в Москве | Канальная и кровельная',
   description: 'Канальная и кровельная вентиляция Shuft для коммерческих объектов. Официальный дилер в Москве, гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/ventilyaciya/' },
 }
 
 export default function VentilyaciyaPage() {

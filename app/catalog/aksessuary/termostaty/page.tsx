@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Термостаты для фанкойлов Shuft — цены 2026 | Купить в Москве',
   description: 'Проводные и беспроводные термостаты для управления фанкойлами Shuft. Сенсорные, умный дом, Wi-Fi. Официальный дилер в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/aksessuary/termostaty/' },
 }
 
 const products = [

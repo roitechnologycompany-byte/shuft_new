@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Канальная вентиляция Shuft — цены 2026 | Купить в Москве',
   description: 'Канальные вентиляционные установки Shuft для офисов, ресторанов и производства. Приточка, вытяжка, рекуперация. Официальный дилер в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/ventilyaciya/kanalnaya/' },
 }
 
 const models = [

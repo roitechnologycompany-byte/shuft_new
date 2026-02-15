@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Отзывы о фанкойлах Shuft — реальные клиенты 2026 | Shuft.Online',
   description: 'Реальные отзывы покупателей о фанкойлах Shuft. Рейтинг 4.9/5 на основе 127 отзывов. Мнения о настенных, кассетных и канальных фанкойлах.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/reviews/' },
 }
 
 const reviewsSchema = {

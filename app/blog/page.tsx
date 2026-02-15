@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Блог про фанкойлы Shuft — статьи и гайды | Shuft.Online',
   description: 'Экспертные статьи про фанкойлы Shuft: как выбрать, сравнение брендов, монтаж, энергоэффективность, история бренда. Гайды 2026.',
+  alternates: { canonical: 'https://shuft.online/blog/' },
 }
 
 const articles = [

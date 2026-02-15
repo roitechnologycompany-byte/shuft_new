@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Климат-контроль в ресторанах и кафе Москвы | Проекты Shuft',
   description: 'Проекты монтажа бесшумных фанкойлов Shuft в ресторанах и кафе Москвы. Раздельные зоны кухни и зала, скрытый монтаж.',
+  alternates: { canonical: 'https://shuft.online/projects/restorany-i-cafe/' },
 }
 
 const projects = [

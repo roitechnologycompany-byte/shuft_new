@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'История компании Shuft.Online | С 2016 года в Москве',
   description: 'История ООО АСПРОМСИСТЕМ — официального дилера Shuft в Москве. Основана в 2016 году, более 150 реализованных проектов, партнёр года Shuft 2023.',
+  alternates: { canonical: 'https://shuft.online/about/history/' },
 }
 
 const timeline = [

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Чиллеры Shuft — купить в Москве | Цены 2026',
   description: 'Воздушные и водяные чиллеры Shuft для систем центрального охлаждения. Официальный дилер в Москве, гарантия 3 года, монтаж и пусконаладка.',
+  alternates: { canonical: 'https://shuft.online/catalog/chillery/' },
 }
 
 const models = [

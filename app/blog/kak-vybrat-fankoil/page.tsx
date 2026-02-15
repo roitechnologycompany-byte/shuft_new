@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Как выбрать фанкойл Shuft для офиса — гайд 2026 | Shuft.Online',
   description: 'Выбираем фанкойл для офиса по площади и мощности. Примеры для офисов разных размеров, рекомендации по моделям Shuft, расчёты с формулами. Гайд 2026.',
+  alternates: { canonical: 'https://shuft.online/blog/kak-vybrat-fankoil/' },
 }
 
 const articleSchema = {

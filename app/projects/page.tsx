@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Реализованные проекты Shuft в Москве | Shuft.Online',
   description: 'Более 150 реализованных проектов монтажа фанкойлов, чиллеров и VRF-систем Shuft в Москве. Офисы, ТЦ, рестораны, производство.',
+  alternates: { canonical: 'https://shuft.online/projects/' },
 }
 
 const projects = [

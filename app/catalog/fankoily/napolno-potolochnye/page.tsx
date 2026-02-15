@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Напольно-потолочные фанкойлы Shuft SFF — купить в Москве',
   description: 'Универсальные напольно-потолочные фанкойлы Shuft. Гибкая установка, мощность 1.6–3.5 кВт. Для офисов 20–50 м². Гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/' },
 }
 
 const models = [

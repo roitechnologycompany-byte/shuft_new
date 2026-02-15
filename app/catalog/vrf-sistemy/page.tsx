@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'VRF-системы Shuft — купить в Москве | Цены и проектирование',
   description: 'Мультизональные VRF-системы Shuft для крупных объектов. Проектирование, поставка, монтаж. Официальный дилер в Москве, гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/vrf-sistemy/' },
 }
 
 export default function VRFPage() {

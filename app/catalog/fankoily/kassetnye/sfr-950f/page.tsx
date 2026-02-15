@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Кассетный фанкойл Shuft SFR-950F — купить в Москве | 72 450 ₽',
   description: 'SFR-950F — кассетный фанкойл 5 кВт для офисов до 50 м². Встраивается в потолок, 4-сторонняя подача воздуха. Гарантия 3 года, монтаж за 1–3 дня.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/kassetnye/sfr-950f/' },
 }
 
 const productSchema = {

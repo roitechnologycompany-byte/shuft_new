@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Средняя стоимость фанкойла Shuft в 2026 году | Цены и расчёты',
   description: 'Сколько стоит фанкойл Shuft в 2026 году: цены на настенные, кассетные, канальные модели. Стоимость монтажа и обслуживания. Реальные примеры из проектов.',
+  alternates: { canonical: 'https://shuft.online/blog/srednyaya-stoimost-fankoila/' },
 }
 
 const articleSchema = {

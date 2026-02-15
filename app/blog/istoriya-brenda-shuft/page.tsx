@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'История бренда Shuft — от датского стартапа до лидера в России | Shuft.Online',
   description: 'Как бренд Shuft прошёл путь от основания в Дании в 1994 году до полной локализации производства в России. История, технологии, достижения.',
+  alternates: { canonical: 'https://shuft.online/blog/istoriya-brenda-shuft/' },
 }
 
 const timeline = [

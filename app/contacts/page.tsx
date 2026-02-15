@@ -5,6 +5,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Контакты — Shuft.Online | Официальный дилер Shuft в Москве',
   description: 'Адрес: пл. Спартаковская, д. 14, стр. 3, Москва. Телефон: +7 (495) 120-33-75. Официальный дилер Shuft — фанкойлы, чиллеры, VRF-системы.',
+  alternates: { canonical: 'https://shuft.online/contacts/' },
 }
 
 const localBusinessSchema = {

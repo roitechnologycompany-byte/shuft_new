@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Онлайн-калькуляторы подбора оборудования Shuft | Shuft.Online',
   description: 'Бесплатные онлайн-калькуляторы для подбора фанкойлов и чиллеров Shuft. Введите площадь помещения — получите рекомендацию модели и стоимость.',
+  alternates: { canonical: 'https://shuft.online/calc/' },
 }
 
 const calculators = [

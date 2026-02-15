@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Фильтры для фанкойлов Shuft — цены 2026 | Купить в Москве',
   description: 'Фильтры для фанкойлов Shuft: G3, G4, F7. Замена раз в 3 месяца. Оригинальные фильтры в наличии, доставка по Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/aksessuary/filtry/' },
 }
 
 const products = [

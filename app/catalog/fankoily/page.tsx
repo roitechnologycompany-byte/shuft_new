@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Фанкойлы Shuft — купить в Москве с гарантией 3 года',
   description: 'Все модели фанкойлов Shuft: настенные, канальные, кассетные, напольно-потолочные. Цены, характеристики, доставка, монтаж. Официальный дилер в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/' },
 }
 
 const types = [

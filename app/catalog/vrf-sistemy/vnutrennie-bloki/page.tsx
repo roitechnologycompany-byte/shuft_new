@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Внутренние блоки VRF Shuft — цены 2026 | Купить в Москве',
   description: 'Внутренние блоки VRF-систем Shuft: настенные, кассетные, канальные, напольно-потолочные. Официальный дилер, гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/vrf-sistemy/vnutrennie-bloki/' },
 }
 
 const types = [

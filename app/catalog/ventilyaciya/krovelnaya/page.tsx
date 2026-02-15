@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Кровельная вентиляция Shuft — цены 2026 | Купить в Москве',
   description: 'Кровельные вентиляционные установки и вентиляторы Shuft. Монтаж на крыше без нарушения интерьера. Официальный дилер в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/ventilyaciya/krovelnaya/' },
 }
 
 const models = [

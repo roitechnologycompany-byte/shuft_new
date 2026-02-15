@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Услуги — монтаж, подбор, сервис фанкойлов Shuft | Shuft.Online',
   description: 'Подбор, монтаж, проектирование и сервис климатического оборудования Shuft в Москве. Официальный дилер, лицензированные специалисты.',
+  alternates: { canonical: 'https://shuft.online/services/' },
 }
 
 const services = [

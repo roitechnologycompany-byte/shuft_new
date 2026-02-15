@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Политика конфиденциальности | Shuft.Online',
   description: 'Политика конфиденциальности сайта shuft.online. ООО АСПРОМСИСТЕМ.',
+  alternates: { canonical: 'https://shuft.online/privacy-policy/' },
 }
 
 export default function PrivacyPolicyPage() {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Запчасти для фанкойлов Shuft — цены 2026 | Москва',
   description: 'Оригинальные запчасти для фанкойлов Shuft: вентиляторы, двигатели, платы управления, поддоны. Гарантия 1 год. Доставка по Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/zapchasti/' },
 }
 
 const categories = [

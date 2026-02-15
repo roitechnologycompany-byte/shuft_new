@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Воздушные чиллеры Shuft — цены 2026 | Купить в Москве',
   description: 'Воздушные чиллеры Shuft SCH-A для систем чиллер-фанкойл. Мощность 20–60 кВт, работа до −25°C. Официальный дилер, гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/chillery/vozdushnye/' },
 }
 
 const models = [

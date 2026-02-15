@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Клапаны для фанкойлов Shuft — цены 2026 | Купить в Москве',
   description: 'Двух- и трёхходовые клапаны для фанкойлов Shuft: шаровые, регулирующие, с электроприводом. Официальный дилер, доставка по Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/aksessuary/klapany/' },
 }
 
 const products = [

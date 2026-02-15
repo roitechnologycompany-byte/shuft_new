@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Каталог оборудования Shuft — купить в Москве',
   description: 'Полный каталог климатического оборудования Shuft: фанкойлы, чиллеры, VRF-системы, вентиляция. Официальный дилер в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/' },
 }
 
 const categories = [

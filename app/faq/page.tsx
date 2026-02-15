@@ -5,6 +5,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'FAQ — Частые вопросы про фанкойлы Shuft | Shuft.Online',
   description: 'Ответы на 20 частых вопросов про фанкойлы Shuft: где купить, как выбрать, сколько стоит монтаж, какая гарантия, уровень шума и многое другое.',
+  alternates: { canonical: 'https://shuft.online/faq/' },
 }
 
 const faqs = [

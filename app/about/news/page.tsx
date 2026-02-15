@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Новости компании Shuft.Online | Москва 2026',
   description: 'Последние новости официального дилера Shuft в Москве: новые модели, акции, завершённые проекты, изменения в ценах.',
+  alternates: { canonical: 'https://shuft.online/about/news/' },
 }
 
 const news = [

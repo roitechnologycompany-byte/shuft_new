@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Аксессуары и комплектующие Shuft — купить в Москве',
   description: 'Термостаты, клапаны, фильтры, изоляция и другие аксессуары для фанкойлов Shuft. Официальный дилер, всегда в наличии.',
+  alternates: { canonical: 'https://shuft.online/catalog/aksessuary/' },
 }
 
 const categories = [

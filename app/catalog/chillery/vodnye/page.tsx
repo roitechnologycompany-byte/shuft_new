@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Водяные чиллеры Shuft — цены 2026 | Купить в Москве',
   description: 'Водяные чиллеры Shuft SCH-W для системы чиллер-фанкойл. Мощность 20–40 кВт, COP до 5.2. Официальный дилер, гарантия 3 года, монтаж в Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/chillery/vodnye/' },
 }
 
 const models = [

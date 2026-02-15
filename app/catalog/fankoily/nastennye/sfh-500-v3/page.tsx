@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Shuft SFH-500 V3 — настенный фанкойл 4.5 кВт | Цена 56 960 ₽',
   description: 'SFH-500 V3 — настенный фанкойл 4.5 кВт для офисов 30–45 м². Тихий режим 26 дБА. Гарантия 3 года, монтаж за 1–3 дня, склад в наличии.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/nastennye/sfh-500-v3/' },
 }
 
 const productSchema = {

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Настенный фанкойл Shuft SFH-1200 V3 — купить в Москве | 98 900 ₽',
   description: 'SFH-1200 V3 — настенный фанкойл 11 кВт для помещений до 110 м². Минимальный шум 25 дБА. Гарантия 3 года, монтаж за 1–3 дня. Официальный дилер Shuft.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/nastennye/sfh-1200-v3/' },
 }
 
 const productSchema = {

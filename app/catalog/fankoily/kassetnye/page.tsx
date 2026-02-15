@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Кассетные фанкойлы Shuft SFR — купить в Москве | Цены 2026',
   description: 'Встраиваемые кассетные фанкойлы Shuft для больших офисов и ТЦ. Мощность 5–20 кВт, распределение воздуха в 4 стороны. Гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/kassetnye/' },
 }
 
 const models = [

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Канальные фанкойлы Shuft SFC — купить в Москве | Цены 2026',
   description: 'Скрытые канальные фанкойлы Shuft для квартир и офисов. Не видны в интерьере, мощность 2–22 кВт. Официальный дилер, гарантия 3 года.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/kanalnye/' },
 }
 
 const models = [

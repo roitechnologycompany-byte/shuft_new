@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Напольно-потолочный фанкойл Shuft SFF-150 — купить в Москве | 43 930 ₽',
   description: 'SFF-150 — напольно-потолочный фанкойл 1.6 кВт для помещений до 16 м². Два режима монтажа: на полу или на потолке. Гарантия 3 года, монтаж за 1–3 дня.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-150/' },
 }
 
 const productSchema = {

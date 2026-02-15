@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Теплоизоляция для трубопроводов Shuft — цены 2026',
   description: 'Теплоизоляция для медных трубопроводов фанкойлов и чиллеров Shuft: K-Flex, трубки Armaflex. Предотвращает конденсат. Доставка по Москве.',
+  alternates: { canonical: 'https://shuft.online/catalog/aksessuary/izolyantsiya/' },
 }
 
 const products = [

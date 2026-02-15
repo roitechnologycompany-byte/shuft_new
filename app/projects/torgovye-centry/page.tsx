@@ -5,6 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Климатизация торговых центров Москвы | Проекты Shuft',
   description: 'Проекты монтажа фанкойлов и чиллеров Shuft в торговых центрах Москвы. Кассетные модели, центральная система, экономия до 20%.',
+  alternates: { canonical: 'https://shuft.online/projects/torgovye-centry/' },
 }
 
 const projects = [

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Shuft vs Carrier vs Daikin — какой фанкойл выбрать в 2026 | Shuft.Online',
   description: 'Подробное сравнение фанкойлов Shuft, Carrier и Daikin по цене, качеству, энергоэффективности и обслуживанию в России. Гайд 2026.',
+  alternates: { canonical: 'https://shuft.online/blog/shuft-vs-carrier-daikin/' },
 }
 
 const articleSchema = {

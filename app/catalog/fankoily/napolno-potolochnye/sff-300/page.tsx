@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Напольно-потолочный фанкойл Shuft SFF-300 — купить в Москве | 51 200 ₽',
   description: 'SFF-300 — напольно-потолочный фанкойл 2.8 кВт для помещений до 28 м². Хит продаж! Два варианта монтажа. Гарантия 3 года, монтаж за 1–3 дня.',
+  alternates: { canonical: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-300/' },
 }
 
 const productSchema = {
