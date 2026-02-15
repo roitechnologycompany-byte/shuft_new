@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import ReviewForm from './ReviewForm'
 
 export const metadata: Metadata = {
   title: 'Отзывы о фанкойлах Shuft — реальные клиенты 2026 | Shuft.Online',
@@ -213,6 +214,9 @@ export default function ReviewsPage() {
             </div>
           ))}
         </div>
+
+        {/* Review submission form */}
+        <ReviewForm />
 
         {/* CTA */}
         <div className="bg-blue-600 rounded-3xl p-8 text-white text-center">

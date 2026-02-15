@@ -24,6 +24,20 @@ export const metadata: Metadata = {
     siteName: 'Shuft.Online',
     locale: 'ru_RU',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Фанкойлы Shuft — официальный дилер в Москве',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Фанкойлы Shuft в Москве — официальный дилер Shuft.Online',
+    description: 'Официальный дилер Shuft в Москве. Фанкойлы, чиллеры, VRF-системы.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

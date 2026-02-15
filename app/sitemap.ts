@@ -106,6 +106,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Контакты
     { url: `${baseUrl}/contacts`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
 
+    // Инструменты
+    { url: `${baseUrl}/catalog/search`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/catalog/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.65 },
+
     // Юридические
     { url: `${baseUrl}/offer`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/returns`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
