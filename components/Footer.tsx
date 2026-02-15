@@ -84,6 +84,8 @@ export default function Footer() {
               <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href="/contacts" className="hover:text-white transition-colors">Контакты</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Конфиденциальность</Link></li>
+              <li><Link href="/offer" className="hover:text-white transition-colors">Публичная оферта</Link></li>
+              <li><Link href="/returns" className="hover:text-white transition-colors">Возврат и обмен</Link></li>
             </ul>
           </div>
         </div>
