@@ -59,6 +59,59 @@ const organizationSchema = {
     opens: '09:00',
     closes: '18:00',
   },
+  sameAs: [
+    'https://2gis.ru/moscow/firm/shuft-online',
+    'https://yandex.ru/maps/org/shuft_online',
+  ],
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://shuft.online/#localbusiness',
+  name: 'Shuft.Online — Официальный дилер Shuft в Москве',
+  image: 'https://shuft.online/og-image.jpg',
+  url: 'https://shuft.online',
+  telephone: '+7-495-120-33-75',
+  email: 'info@shuft.online',
+  priceRange: '₽₽',
+  currenciesAccepted: 'RUB',
+  paymentAccepted: 'Cash, Credit Card, Bank Transfer',
+  description: 'Официальный дилер климатической техники Shuft в Москве. Продажа фанкойлов, чиллеров, VRF-систем. Монтаж и техническое обслуживание.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'пл. Спартаковская, д. 14, стр. 3, помещ. 3Н',
+    addressLocality: 'Москва',
+    addressRegion: 'Москва',
+    postalCode: '105082',
+    addressCountry: 'RU',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 55.7804,
+    longitude: 37.6870,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '127',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  hasMap: 'https://yandex.ru/maps/org/shuft_online',
+  servesCuisine: null,
+  areaServed: {
+    '@type': 'City',
+    name: 'Москва',
+  },
 }
 
 export default function RootLayout({
@@ -75,6 +128,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
       <body className="flex flex-col min-h-screen">
