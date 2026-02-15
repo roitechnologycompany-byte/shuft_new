@@ -35,6 +35,12 @@ async function main() {
     { key: 'google_analytics', value: '', group: 'seo', label: 'Google Analytics ID' },
     { key: 'telegram_bot_token', value: '', group: 'integrations', label: 'Telegram Bot Token' },
     { key: 'telegram_chat_id', value: '', group: 'integrations', label: 'Telegram Chat ID' },
+    { key: 'notify_email', value: '', group: 'integrations', label: 'Email для уведомлений' },
+    { key: 'smtp_host', value: '', group: 'integrations', label: 'SMTP Host' },
+    { key: 'smtp_port', value: '587', group: 'integrations', label: 'SMTP Port' },
+    { key: 'smtp_user', value: '', group: 'integrations', label: 'SMTP User' },
+    { key: 'smtp_password', value: '', group: 'integrations', label: 'SMTP Password' },
+    { key: 'smtp_from', value: 'noreply@shuft.online', group: 'integrations', label: 'Email From' },
   ]
   for (const s of companySettings) {
     await prisma.setting.upsert({ where: { key: s.key }, update: {}, create: s })

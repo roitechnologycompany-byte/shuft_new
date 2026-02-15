@@ -32,7 +32,12 @@ const defaultSettings: SettingsGrouped = {
   integrations: {
     telegram_bot_token: '',
     telegram_chat_id: '',
-    sendgrid_api_key: '',
+    notify_email: '',
+    smtp_host: '',
+    smtp_port: '587',
+    smtp_user: '',
+    smtp_password: '',
+    smtp_from: 'noreply@shuft.online',
     amocRM_token: '',
   },
 }
@@ -59,7 +64,12 @@ const fieldLabels: Record<string, string> = {
   google_analytics: 'Google Analytics ID',
   telegram_bot_token: 'Telegram Bot Token',
   telegram_chat_id: 'Telegram Chat ID',
-  sendgrid_api_key: 'SendGrid API Key',
+  notify_email: 'Email для уведомлений о заявках',
+  smtp_host: 'SMTP-сервер (host)',
+  smtp_port: 'SMTP-порт (587 / 465)',
+  smtp_user: 'SMTP-логин',
+  smtp_password: 'SMTP-пароль',
+  smtp_from: 'Email отправителя (From)',
   amocRM_token: 'amoCRM Token',
 }
 

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Кассетные фанкойлы Shuft SFR — купить в Москве | Цены 2026',
@@ -64,6 +66,58 @@ export default function KassetnyePage() {
           </div>
         ))}
       </div>
+      <VideoSection
+        title="Видео-обзоры кассетных фанкойлов Shuft SFR"
+        videos={[
+          {
+            id: 'hFZFjoX2cGg',
+            title: 'Обзор Shuft SFR-950F — монтаж и настройка',
+            description: 'Полный обзор кассетного фанкойла Shuft SFR-950F: установка в потолок, подключение, первый запуск.',
+            duration: '8:21',
+          },
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'Кассетный vs настенный фанкойл — что выбрать?',
+            description: 'Сравнение кассетного и настенного фанкойла по шуму, стоимости монтажа и применению.',
+            duration: '6:05',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SFR F-серия',
+            description: 'Монтаж в подвесной потолок, подключение, пусконаладка',
+            size: '4.1 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sfr-f-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFR-950F',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.2 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sfr-950f-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — кассетные',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sfr-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа кассетного фанкойла',
+            description: 'Монтажный чертёж, схема обвязки, размеры проёма',
+            size: '2.0 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-sfr-mounting-scheme.pdf',
+          },
+        ]}
+      />
+
       <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Преимущества кассетных фанкойлов Shuft</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

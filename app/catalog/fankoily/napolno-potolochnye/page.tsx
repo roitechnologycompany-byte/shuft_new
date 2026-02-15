@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Напольно-потолочные фанкойлы Shuft SFF — купить в Москве',
@@ -64,6 +66,52 @@ export default function NapolnoPotolochnyePage() {
           </div>
         ))}
       </div>
+
+      <VideoSection
+        title="Видео-обзоры напольно-потолочных фанкойлов Shuft"
+        videos={[
+          {
+            id: 'hFZFjoX2cGg',
+            title: 'Обзор Shuft SFF-400 — напольно-потолочный фанкойл',
+            description: 'Два режима монтажа: напольный и потолочный. Обзор возможностей и характеристик модели SFF-400.',
+            duration: '7:44',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SFF-серия',
+            description: 'Монтаж в напольном и потолочном исполнении, подключение',
+            size: '3.5 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sff-floor-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFF-200',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.0 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sff-200-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFF-400',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.0 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sff-400-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — напольно-потолочные',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sff-floor-certificate.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

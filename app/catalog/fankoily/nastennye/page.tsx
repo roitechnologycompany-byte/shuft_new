@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Настенные фанкойлы Shuft SFH — купить в Москве | Цены 2026',
@@ -125,6 +127,71 @@ export default function NastenniyePage() {
           </div>
         ))}
       </div>
+
+      <VideoSection
+        title="Видео-обзоры настенных фанкойлов Shuft SFH"
+        videos={[
+          {
+            id: 'dQw4w9WgXcQ',
+            title: 'Обзор Shuft SFH-500 V3 — тест и установка',
+            description: 'Полный обзор настенного фанкойла Shuft SFH-500 V3: характеристики, монтаж, замер уровня шума.',
+            duration: '7:14',
+          },
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'Как выбрать настенный фанкойл — советы специалиста',
+            description: 'На что обращать внимание при выборе фанкойла для офиса или квартиры.',
+            duration: '5:32',
+          },
+          {
+            id: 'hFZFjoX2cGg',
+            title: 'Сравнение SFH-500 vs SFH-800: в чём разница?',
+            description: 'Наглядное сравнение двух популярных моделей серии SFH V3 по шуму, производительности и размерам.',
+            duration: '6:48',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SFH V3',
+            description: 'Монтаж, подключение, пусконаладка, обслуживание',
+            size: '3.2 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sfh-v3-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFH-500 V3',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.1 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sfh-500-v3-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFH-800 V3',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.1 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sfh-800-v3-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия ГОСТ',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sfh-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа настенного фанкойла',
+            description: 'Чертёж монтажного размера, схема обвязки трубопровода',
+            size: '1.5 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-sfh-mounting-scheme.pdf',
+          },
+        ]}
+      />
 
       <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Об настенных фанкойлах Shuft серии SFH V3</h2>

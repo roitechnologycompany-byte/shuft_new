@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { sendApplicationEmail } from '@/lib/email'
 
 const roomTypeLabels: Record<string, string> = {
   office: 'Офис', shop: 'Магазин/бутик', warehouse: 'Склад',
@@ -56,8 +57,9 @@ export async function POST(req: NextRequest) {
     data: { name, phone, email, address, roomType, area, message, source: source || 'contact_form' },
   })
 
-  // Асинхронно отправляем уведомление в Telegram (не блокируем ответ)
+  // Асинхронно отправляем уведомления (не блокируем ответ)
   sendTelegramNotification(app).catch(() => {})
+  sendApplicationEmail(app).catch(() => {})
 
   return NextResponse.json({ ok: true, id: app.id }, { status: 201 })
 }

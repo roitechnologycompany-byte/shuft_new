@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Канальные фанкойлы Shuft SFC — купить в Москве | Цены 2026',
@@ -56,6 +58,65 @@ export default function KanalnyePage() {
           </div>
         ))}
       </div>
+
+      <VideoSection
+        title="Видео-обзоры канальных фанкойлов Shuft SFF"
+        videos={[
+          {
+            id: 'dQw4w9WgXcQ',
+            title: 'Обзор Shuft SFF-500G50 — скрытый монтаж',
+            description: 'Установка канального фанкойла в межпотолочное пространство, подключение воздуховодов.',
+            duration: '9:17',
+          },
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'Почему канальные фанкойлы лучше для квартир?',
+            description: 'Разбираем преимущества скрытого монтажа и невидимого климата в доме.',
+            duration: '5:50',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SFF G50-серия',
+            description: 'Скрытый монтаж, подключение воздуховодов, обслуживание',
+            size: '3.8 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sff-g50-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFF-300G50',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.0 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sff-300g50-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SFF-500G50',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.0 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sff-500g50-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — канальные',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sff-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа канального фанкойла',
+            description: 'Монтажный чертёж, разводка воздуховодов, размеры',
+            size: '2.3 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-sff-mounting-scheme.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }
