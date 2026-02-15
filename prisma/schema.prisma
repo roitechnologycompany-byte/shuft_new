@@ -1,0 +1,144 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ===== ПОЛЬЗОВАТЕЛИ АДМИНКИ =====
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("editor") // admin | editor | viewer
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ===== ТОВАРЫ =====
+model Product {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  name        String
+  category    String
+  subcategory String?
+  sku         String?  @unique
+  price       Float
+  priceOld    Float?
+  inStock     Boolean  @default(true)
+  stockCount  Int      @default(0)
+  description String
+  shortDesc   String?
+  images      String   @default("[]")
+  videoUrl    String?
+  specs       String   @default("{}")
+  features    String   @default("[]")
+  included    String   @default("[]")
+  seoTitle    String?
+  seoDesc     String?
+  seoKeywords String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  reviews     Review[]
+}
+
+// ===== СТАТЬИ БЛОГА =====
+model BlogPost {
+  id          Int       @id @default(autoincrement())
+  slug        String    @unique
+  title       String
+  excerpt     String?
+  content     String
+  image       String?
+  author      String    @default("Редакция Shuft.Online")
+  category    String    @default("guides")
+  tags        String    @default("[]")
+  seoTitle    String?
+  seoDesc     String?
+  seoKeywords String?
+  isPublished Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ===== FAQ =====
+model Faq {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  category  String   @default("general")
+  sortOrder Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ===== ПРОЕКТЫ =====
+model Project {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  title       String
+  description String
+  address     String?
+  area        String?
+  task        String?
+  solution    String?
+  result      String?
+  cost        String?
+  category    String   @default("ofisy")
+  images      String   @default("[]")
+  products    String   @default("[]")
+  seoTitle    String?
+  seoDesc     String?
+  isPublished Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ===== ОТЗЫВЫ =====
+model Review {
+  id         Int      @id @default(autoincrement())
+  name       String
+  company    String?
+  city       String?
+  rating     Int      @default(5)
+  text       String
+  productId  Int?
+  product    Product? @relation(fields: [productId], references: [id])
+  isApproved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// ===== ЗАЯВКИ С САЙТА =====
+model Application {
+  id        Int      @id @default(autoincrement())
+  name      String
+  phone     String
+  email     String?
+  address   String?
+  roomType  String?
+  area      String?
+  message   String?
+  source    String   @default("contact_form")
+  status    String   @default("new")
+  adminNote String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ===== НАСТРОЙКИ КОМПАНИИ =====
+model Setting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  group     String   @default("general")
+  label     String?
+  updatedAt DateTime @updatedAt
+}

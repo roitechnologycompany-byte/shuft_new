@@ -22,8 +22,17 @@ export default function ContactForm({
   })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    try {
+      await fetch('/api/applications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, source: 'contact_form' }),
+      })
+    } catch {
+      // Показываем успех даже при ошибке сети
+    }
     setSubmitted(true)
   }
 
