@@ -12,6 +12,7 @@ const navItems = [
   { href: '/admin/faq', label: 'FAQ', icon: '❓' },
   { href: '/admin/projects', label: 'Проекты', icon: '🏗️' },
   { href: '/admin/reviews', label: 'Отзывы', icon: '⭐' },
+  { href: '/admin/subscribers', label: 'Подписчики', icon: '📬' },
   { href: '/admin/settings', label: 'Настройки', icon: '⚙️' },
 ]
 

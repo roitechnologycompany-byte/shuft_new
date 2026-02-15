@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
+// Search & Compare links added below
 
 export const metadata: Metadata = {
   title: 'Каталог оборудования Shuft — купить в Москве',
@@ -70,10 +71,24 @@ export default function CatalogPage() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'Каталог' }]} />
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Каталог оборудования Shuft</h1>
-      <p className="text-gray-600 text-lg mb-10">
+      <p className="text-gray-600 text-lg mb-6">
         Официальный дилер Shuft в Москве. Всё климатическое оборудование в наличии на складе.
         Гарантия производителя 3 года, доставка за 24 часа, монтаж за 1–3 дня.
       </p>
+
+      {/* Быстрые инструменты */}
+      <div className="flex flex-wrap gap-3 mb-10">
+        <Link href="/catalog/search/" className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors">
+          🔍 Поиск по каталогу
+        </Link>
+        <Link href="/catalog/compare/" className="inline-flex items-center gap-2 bg-white border border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+          ⚖️ Сравнение моделей
+        </Link>
+        <Link href="/calc/fankoil" className="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-orange-600 transition-colors">
+          🧮 Калькулятор подбора
+        </Link>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((cat, i) => (
           <Link key={i} href={cat.href} className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200">

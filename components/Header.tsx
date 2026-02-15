@@ -11,6 +11,8 @@ const catalogMenu = [
       { name: 'Канальные', href: '/catalog/fankoily/kanalnye' },
       { name: 'Настенные', href: '/catalog/fankoily/nastennye' },
       { name: 'Напольно-потолочные', href: '/catalog/fankoily/napolno-potolochnye' },
+      { name: '🔍 Поиск по каталогу', href: '/catalog/search' },
+      { name: '⚖️ Сравнение моделей', href: '/catalog/compare' },
     ]
   },
   { title: 'Чиллеры', href: '/catalog/chillery' },

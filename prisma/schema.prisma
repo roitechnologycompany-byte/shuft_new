@@ -133,6 +133,16 @@ model Application {
   updatedAt DateTime @updatedAt
 }
 
+// ===== ПОДПИСЧИКИ =====
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 // ===== НАСТРОЙКИ КОМПАНИИ =====
 model Setting {
   id        Int      @id @default(autoincrement())

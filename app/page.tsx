@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export const metadata: Metadata = {
   title: 'Фанкойлы Shuft в Москве — официальный дилер Shuft.Online',
@@ -508,6 +509,13 @@ export default function HomePage() {
               Все вопросы и ответы →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4">
+          <NewsletterForm />
         </div>
       </section>
 

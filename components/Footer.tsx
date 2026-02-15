@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NewsletterForm from './NewsletterForm'
 
 export default function Footer() {
   return (
@@ -90,8 +91,21 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Newsletter */}
+        <div className="border-t border-gray-700 mt-10 pt-8 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="md:flex-1">
+              <p className="text-white font-semibold mb-1">Подписка на новости Shuft</p>
+              <p className="text-gray-400 text-sm">Обзоры, акции, новые модели — раз в месяц</p>
+            </div>
+            <div className="md:flex-1">
+              <NewsletterForm variant="footer" />
+            </div>
+          </div>
+        </div>
+
         {/* Bottom */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        <div className="border-t border-gray-700 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="text-sm text-gray-500">
               <p>© 2024–2026 shuft.online | ООО «АСПРОМСИСТЕМ»</p>

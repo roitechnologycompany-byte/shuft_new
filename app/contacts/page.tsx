@@ -78,22 +78,29 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          {/* Map placeholder */}
+          {/* Map — Yandex Maps embed */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-5xl mb-4">🗺️</div>
-                <p className="text-gray-600 font-medium">Карта — пл. Спартаковская, д. 14</p>
-                <p className="text-gray-500 text-sm">Москва, 5 мин от м. Красносельская</p>
-                <a 
-                  href="https://yandex.ru/maps/-/CCU0vXRe8A" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block btn-primary text-sm"
-                >
-                  Открыть на Яндекс.Картах
-                </a>
-              </div>
+            <div className="rounded-2xl overflow-hidden h-96 shadow-md relative">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.679400%2C55.772300&z=16&pt=37.679400%2C55.772300,pmwtm1&text=%D0%BF%D0%BB.%20%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%20%D0%B4.%2014%2C%20%D1%81%D1%82%D1%80.%203&lang=ru_RU"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                title="Офис Shuft.Online на Яндекс.Картах"
+                style={{ border: 0 }}
+              />
+            </div>
+            <div className="mt-3 flex gap-4 text-sm text-gray-600">
+              <span>📍 5 мин от м. Красносельская (МЦК)</span>
+              <a
+                href="https://yandex.ru/maps/?pt=37.679400,55.772300&z=16&l=map"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Открыть на Яндекс.Картах →
+              </a>
             </div>
           </div>
         </div>

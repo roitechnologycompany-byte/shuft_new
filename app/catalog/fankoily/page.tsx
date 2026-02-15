@@ -157,6 +157,7 @@ export default function FancoilsPage() {
         <p className="text-gray-600 mb-6">Наши инженеры подберут оптимальный фанкойл под ваш объект бесплатно</p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link href="/calc/fankoil" className="btn-accent">Калькулятор подбора</Link>
+          <Link href="/catalog/compare/" className="btn-secondary">⚖️ Сравнить модели</Link>
           <a href="tel:+74951203375" className="btn-secondary">+7 (495) 120-33-75</a>
         </div>
       </div>
