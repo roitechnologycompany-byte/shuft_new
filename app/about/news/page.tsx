@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/about/news/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'О компании', item: 'https://shuft.online/about/' },
+    { '@type': 'ListItem', position: 3, name: 'Новости', item: 'https://shuft.online/about/news/' },
+  ],
+}
+
+const newsItemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Новости Shuft.Online',
+  description: 'Актуальные новости официального дилера Shuft в Москве',
+  url: 'https://shuft.online/about/news/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Поступили в продажу фанкойлы серии SFH V3 — обновлённая линейка 2026' },
+    { '@type': 'ListItem', position: 2, name: 'Зимняя акция: скидка 10% на монтаж при заказе оборудования в январе–феврале' },
+    { '@type': 'ListItem', position: 3, name: 'Завершён монтаж системы чиллер-фанкойл в логистическом центре на МКАД' },
+    { '@type': 'ListItem', position: 4, name: 'Shuft.Online — «Лучший дилер Shuft» по итогам 2025 года' },
+  ],
+}
+
 const news = [
   {
     date: '10 февраля 2026',
@@ -79,6 +103,9 @@ const tagColors: Record<string, string> = {
 
 export default function NewsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(newsItemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -119,5 +146,6 @@ export default function NewsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

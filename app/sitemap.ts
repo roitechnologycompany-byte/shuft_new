@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Фанкойлы
     { url: `${baseUrl}/catalog/fankoily`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/catalog/fankoily/nastennye`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/catalog/fankoily/nastennye/sfh-500-v3`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/catalog/fankoily/nastennye/sfh-800-v3`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/catalog/fankoily/nastennye/sfh-1200-v3`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/catalog/fankoily/kassetnye`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },

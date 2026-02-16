@@ -8,6 +8,38 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/zapchasti/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Запчасти', item: 'https://shuft.online/catalog/zapchasti/' },
+  ],
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Как заказать запчасть для фанкойла Shuft?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Позвоните по +7 (495) 120-33-75 или напишите в форму. Укажите модель фанкойла (например, SFH-1200 V3) и опишите неисправность. Менеджер уточнит артикул и наличие на складе. Гарантийный ремонт — бесплатно при наличии гарантийного талона.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Сколько ждать запчасть под заказ?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Позиции в наличии доставляем в день заказа. Запчасти под заказ — 5–7 рабочих дней. Теплообменники и редкие компоненты — 10–14 дней.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Распространяется ли гарантия на установленные запчасти?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Да, гарантия на запчасти — 1 год с момента установки. Если запчасть установлена нашим сервисным инженером, дополнительно действует гарантия на работы 6 месяцев.' },
+    },
+  ],
+}
+
 const categories = [
   {
     name: 'Вентиляторы и двигатели',
@@ -46,6 +78,9 @@ const categories = [
 
 export default function ZapchastiPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -124,5 +159,6 @@ export default function ZapchastiPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
