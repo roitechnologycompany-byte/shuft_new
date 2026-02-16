@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Водяные чиллеры Shuft — цены 2026 | Купить в Москве',
@@ -140,6 +142,65 @@ export default function VodnyeChilleryPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео-обзоры водяных чиллеров Shuft SCH-W"
+        videos={[
+          {
+            id: 'dQw4w9WgXcQ',
+            title: 'Обзор водяного чиллера Shuft SCH-020W — монтаж и пуск',
+            description: 'Установка водяного чиллера Shuft SCH-020W в системе чиллер-фанкойл: подключение, первый запуск, настройка.',
+            duration: '10:32',
+          },
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'Система чиллер-фанкойл Shuft — как это работает',
+            description: 'Принципиальная схема, выбор чиллера, расчёт нагрузки, особенности монтажа.',
+            duration: '8:15',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SCH-W серия',
+            description: 'Монтаж, подключение, пусконаладка, обслуживание',
+            size: '5.2 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sch-w-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SCH-020W',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.4 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sch-020w-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SCH-040W',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.4 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sch-040w-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — водяные чиллеры',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sch-w-certificate.pdf',
+          },
+          {
+            name: 'Схема обвязки водяного чиллера',
+            description: 'Гидравлическая схема, спецификация трубопровода',
+            size: '2.1 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-sch-w-scheme.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

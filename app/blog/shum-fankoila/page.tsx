@@ -5,7 +5,19 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Уровень шума фанкойлов Shuft — насколько тихо? | Shuft.Online',
   description: 'Измеренный уровень шума всех моделей Shuft. Сравнение с конкурентами и бытовыми приборами. Какие фанкойлы выбрать для переговорных и спален.',
-  alternates: { canonical: 'https://shuft.online/blog/shum-fankoila' },
+  alternates: { canonical: 'https://shuft.online/blog/shum-fankoila/' },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Уровень шума фанкойлов Shuft — насколько тихо?',
+  description: 'Измеренный уровень шума всех моделей Shuft. Сравнение с конкурентами и бытовыми приборами.',
+  datePublished: '2025-12-20T10:00:00+03:00',
+  dateModified: '2025-12-20T10:00:00+03:00',
+  author: { '@type': 'Person', name: 'Иван Петров', jobTitle: 'Инженер-климатолог' },
+  publisher: { '@type': 'Organization', name: 'Shuft.Online', logo: { '@type': 'ImageObject', url: 'https://shuft.online/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://shuft.online/blog/shum-fankoila/' },
 }
 
 export default function ShumFankoilaPage() {
@@ -20,8 +32,10 @@ export default function ShumFankoilaPage() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <Breadcrumbs items={[
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
         { name: 'Блог', href: '/blog' },
         { name: 'Уровень шума фанкойлов Shuft' },
@@ -179,5 +193,6 @@ export default function ShumFankoilaPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

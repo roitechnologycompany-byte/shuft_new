@@ -5,11 +5,25 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Энергоэффективность фанкойлов Shuft — сколько они экономят | Shuft.Online',
   description: 'Расчёт потребления электроэнергии фанкойлами Shuft. Сравнение с кондиционерами. Реальная экономия в рублях за сезон. Примеры расчётов.',
-  alternates: { canonical: 'https://shuft.online/blog/energoeffektivnost-shuft' },
+  alternates: { canonical: 'https://shuft.online/blog/energoeffektivnost-shuft/' },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Энергоэффективность фанкойлов Shuft — сколько они экономят',
+  description: 'Расчёт потребления электроэнергии фанкойлами Shuft. Сравнение с кондиционерами. Реальная экономия в рублях.',
+  datePublished: '2025-12-25T10:00:00+03:00',
+  dateModified: '2025-12-25T10:00:00+03:00',
+  author: { '@type': 'Person', name: 'Иван Петров', jobTitle: 'Инженер-климатолог' },
+  publisher: { '@type': 'Organization', name: 'Shuft.Online', logo: { '@type': 'ImageObject', url: 'https://shuft.online/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://shuft.online/blog/energoeffektivnost-shuft/' },
 }
 
 export default function EnergoEffektivnostPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -160,5 +174,6 @@ export default function EnergoEffektivnostPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

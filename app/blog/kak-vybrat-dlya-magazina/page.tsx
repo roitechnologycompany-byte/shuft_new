@@ -5,11 +5,25 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Как выбрать фанкойл Shuft для магазина — советы экспертов | Shuft.Online',
   description: 'Какой тип фанкойла выбрать для торгового зала, бутика или торгового центра. Расчёт мощности, схемы расстановки, примеры и цены. Официальный дилер.',
-  alternates: { canonical: 'https://shuft.online/blog/kak-vybrat-dlya-magazina' },
+  alternates: { canonical: 'https://shuft.online/blog/kak-vybrat-dlya-magazina/' },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Как выбрать фанкойл Shuft для магазина — советы экспертов',
+  description: 'Какой тип фанкойла выбрать для торгового зала, бутика или торгового центра. Расчёт мощности и схемы расстановки.',
+  datePublished: '2025-12-10T10:00:00+03:00',
+  dateModified: '2025-12-10T10:00:00+03:00',
+  author: { '@type': 'Person', name: 'Иван Петров', jobTitle: 'Инженер-климатолог' },
+  publisher: { '@type': 'Organization', name: 'Shuft.Online', logo: { '@type': 'ImageObject', url: 'https://shuft.online/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://shuft.online/blog/kak-vybrat-dlya-magazina/' },
 }
 
 export default function KakVybratDlyaMagazinaPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -160,5 +174,6 @@ export default function KakVybratDlyaMagazinaPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

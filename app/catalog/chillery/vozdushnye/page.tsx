@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Воздушные чиллеры Shuft — цены 2026 | Купить в Москве',
@@ -145,6 +147,59 @@ export default function VozdushnyeChilleryPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео-обзоры воздушных чиллеров Shuft SCH-A"
+        videos={[
+          {
+            id: 'hFZFjoX2cGg',
+            title: 'Обзор воздушного чиллера Shuft SCH-015A — уличный монтаж',
+            description: 'Установка воздушного чиллера на улице: фундамент, подключение трубопровода, защита от замерзания.',
+            duration: '9:48',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по эксплуатации Shuft SCH-A серия',
+            description: 'Монтаж, зимняя эксплуатация, антифриз, обслуживание',
+            size: '4.8 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sch-a-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SCH-015A',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.3 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sch-015a-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SCH-030A',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.3 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sch-030a-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — воздушные чиллеры',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.8 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sch-a-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа воздушного чиллера',
+            description: 'Фундаментный чертёж, виброизоляция, подключение',
+            size: '1.8 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-sch-a-mounting.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

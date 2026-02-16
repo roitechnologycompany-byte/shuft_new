@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Кровельная вентиляция Shuft — цены 2026 | Купить в Москве',
@@ -137,6 +139,52 @@ export default function KrovelnajaVentilPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео-обзоры кровельных вентиляторов Shuft"
+        videos={[
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'Кровельный вентилятор Shuft RBF — монтаж на плоской кровле',
+            description: 'Установка кровельного вентилятора: фундамент, герметизация прохода, электрические подключения.',
+            duration: '8:10',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция кровельные вентиляторы Shuft RBF',
+            description: 'Монтаж на кровле, герметизация, регулировка, обслуживание',
+            size: '3.2 МБ',
+            type: 'manual',
+            url: '/docs/shuft-rbf-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft RBF-355',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '1.0 МБ',
+            type: 'passport',
+            url: '/docs/shuft-rbf-355-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — кровельные вентиляторы',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.7 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-rbf-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа кровельного вентилятора',
+            description: 'Чертёж фундаментного патрубка, примыкание к кровле',
+            size: '1.5 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-rbf-mounting.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

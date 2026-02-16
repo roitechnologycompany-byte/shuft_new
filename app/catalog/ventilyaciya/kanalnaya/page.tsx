@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Канальная вентиляция Shuft — цены 2026 | Купить в Москве',
@@ -127,6 +129,45 @@ export default function KanalnajaVentilPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео-обзоры канальных вентиляторов Shuft"
+        videos={[
+          {
+            id: 'dQw4w9WgXcQ',
+            title: 'Обзор канального вентилятора Shuft SВF-200 — монтаж',
+            description: 'Установка канального вентилятора в воздуховод, электроподключение, настройка скорости.',
+            duration: '6:42',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция канальные вентиляторы Shuft SВF',
+            description: 'Монтаж в воздуховод, электроподключение, обслуживание',
+            size: '2.8 МБ',
+            type: 'manual',
+            url: '/docs/shuft-sbf-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SBF-200',
+            description: 'Технические характеристики и заводской паспорт',
+            size: '0.9 МБ',
+            type: 'passport',
+            url: '/docs/shuft-sbf-200-passport.pdf',
+          },
+          {
+            name: 'Сертификат соответствия — канальные вентиляторы',
+            description: 'Сертификат ТР ТС, действителен до 31.12.2027',
+            size: '0.7 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-sbf-certificate.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

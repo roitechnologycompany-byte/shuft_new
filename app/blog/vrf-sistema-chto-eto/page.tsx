@@ -5,11 +5,25 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'VRF-системы Shuft: что это и когда они нужны | Shuft.Online',
   description: 'Что такое VRF-система Shuft, отличие от чиллер-фанкойла, для каких объектов подходит. Модельный ряд VRF Shuft, стоимость и сравнение.',
-  alternates: { canonical: 'https://shuft.online/blog/vrf-sistema-chto-eto' },
+  alternates: { canonical: 'https://shuft.online/blog/vrf-sistema-chto-eto/' },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'VRF-системы Shuft: что это и когда они нужны',
+  description: 'Что такое VRF-система Shuft, отличие от чиллер-фанкойла, для каких объектов подходит. Модельный ряд VRF Shuft.',
+  datePublished: '2025-12-15T10:00:00+03:00',
+  dateModified: '2025-12-15T10:00:00+03:00',
+  author: { '@type': 'Person', name: 'Иван Петров', jobTitle: 'Инженер-климатолог' },
+  publisher: { '@type': 'Organization', name: 'Shuft.Online', logo: { '@type': 'ImageObject', url: 'https://shuft.online/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://shuft.online/blog/vrf-sistema-chto-eto/' },
 }
 
 export default function VrfSistemaPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -149,5 +163,6 @@ export default function VrfSistemaPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

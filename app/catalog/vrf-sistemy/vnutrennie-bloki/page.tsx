@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Внутренние блоки VRF Shuft — цены 2026 | Купить в Москве',
@@ -145,6 +147,45 @@ export default function VnutrennieBlokyVRFPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео: внутренние блоки VRF Shuft"
+        videos={[
+          {
+            id: 'hFZFjoX2cGg',
+            title: 'Монтаж внутренних блоков VRF Shuft — кассетный тип',
+            description: 'Установка кассетных внутренних блоков VRF в подвесной потолок, подключение к внешнему блоку.',
+            duration: '8:55',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по монтажу VRF Shuft — внутренние блоки',
+            description: 'Монтаж настенных, кассетных и канальных внутренних блоков',
+            size: '5.8 МБ',
+            type: 'manual',
+            url: '/docs/shuft-vrf-indoor-manual.pdf',
+          },
+          {
+            name: 'Паспорт внутренних блоков Shuft SVF',
+            description: 'Технические характеристики для настенного и кассетного типов',
+            size: '1.5 МБ',
+            type: 'passport',
+            url: '/docs/shuft-svf-indoor-passport.pdf',
+          },
+          {
+            name: 'Схема разводки хладагентных линий',
+            description: 'Схема соединения внутренних и внешнего блоков',
+            size: '2.2 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-vrf-refrigerant-scheme.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

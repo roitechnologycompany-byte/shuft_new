@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
+import VideoSection from '@/components/VideoSection'
+import DocsSection from '@/components/DocsSection'
 
 export const metadata: Metadata = {
   title: 'Внешние блоки VRF Shuft — цены 2026 | Купить в Москве',
@@ -148,6 +150,65 @@ export default function VneshnieBlokyVRFPage() {
           </Link>
         </div>
       </div>
+
+      <VideoSection
+        title="Видео об VRF-системах Shuft"
+        videos={[
+          {
+            id: 'dQw4w9WgXcQ',
+            title: 'Обзор VRF-системы Shuft: внешний блок и монтаж',
+            description: 'Установка внешнего VRF-блока Shuft на кровле бизнес-центра: монтаж, подключение хладагентных трубок, пуск.',
+            duration: '11:20',
+          },
+          {
+            id: 'ZZ5LpwO-An4',
+            title: 'VRF vs чиллер-фанкойл — что выгоднее для офиса?',
+            description: 'Сравнение двух систем по инвестициям, эксплуатации и масштабируемости.',
+            duration: '7:33',
+          },
+        ]}
+      />
+
+      <DocsSection
+        title="Документация для скачивания"
+        docs={[
+          {
+            name: 'Инструкция по монтажу VRF Shuft — внешние блоки',
+            description: 'Кровельный монтаж, хладагентные линии, электроподключение',
+            size: '6.5 МБ',
+            type: 'manual',
+            url: '/docs/shuft-vrf-outdoor-manual.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SVF-200',
+            description: 'Технические характеристики внешнего VRF-блока 20 кВт',
+            size: '1.6 МБ',
+            type: 'passport',
+            url: '/docs/shuft-svf-200-passport.pdf',
+          },
+          {
+            name: 'Паспорт Shuft SVF-400',
+            description: 'Технические характеристики внешнего VRF-блока 40 кВт',
+            size: '1.6 МБ',
+            type: 'passport',
+            url: '/docs/shuft-svf-400-passport.pdf',
+          },
+          {
+            name: 'Сертификат VRF-системы Shuft',
+            description: 'Сертификат ТР ТС, допуск к применению в РФ',
+            size: '0.9 МБ',
+            type: 'certificate',
+            url: '/docs/shuft-vrf-certificate.pdf',
+          },
+          {
+            name: 'Схема монтажа VRF — кровельный вариант',
+            description: 'Монтажный чертёж, виброизоляция, крепёж',
+            size: '2.4 МБ',
+            type: 'scheme',
+            url: '/docs/shuft-vrf-roof-scheme.pdf',
+          },
+        ]}
+      />
     </div>
   )
 }

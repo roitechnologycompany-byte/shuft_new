@@ -5,7 +5,19 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export const metadata: Metadata = {
   title: 'Настенные фанкойлы Shuft SFH V3 — полный обзор | Shuft.Online',
   description: 'Обзор настенных фанкойлов Shuft серии SFH V3: SFH-500, SFH-800, SFH-1200. Характеристики, цены, применение, отзывы. Официальный дилер.',
-  alternates: { canonical: 'https://shuft.online/blog/nastennye-fankoily-sfh' },
+  alternates: { canonical: 'https://shuft.online/blog/nastennye-fankoily-sfh/' },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Настенные фанкойлы Shuft SFH V3 — полный обзор',
+  description: 'Обзор настенных фанкойлов Shuft серии SFH V3: SFH-500, SFH-800, SFH-1200. Характеристики, цены, применение.',
+  datePublished: '2026-01-08T10:00:00+03:00',
+  dateModified: '2026-01-08T10:00:00+03:00',
+  author: { '@type': 'Person', name: 'Иван Петров', jobTitle: 'Инженер-климатолог' },
+  publisher: { '@type': 'Organization', name: 'Shuft.Online', logo: { '@type': 'ImageObject', url: 'https://shuft.online/logo.png' } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://shuft.online/blog/nastennye-fankoily-sfh/' },
 }
 
 const models = [
@@ -46,6 +58,8 @@ const models = [
 
 export default function NastennieSFHPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -208,5 +222,6 @@ export default function NastennieSFHPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
