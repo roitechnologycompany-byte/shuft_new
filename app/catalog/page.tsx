@@ -9,6 +9,30 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Каталог климатического оборудования Shuft',
+  url: 'https://shuft.online/catalog/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Фанкойлы Shuft', url: 'https://shuft.online/catalog/fankoily/' },
+    { '@type': 'ListItem', position: 2, name: 'Чиллеры Shuft', url: 'https://shuft.online/catalog/chillery/' },
+    { '@type': 'ListItem', position: 3, name: 'VRF-системы Shuft', url: 'https://shuft.online/catalog/vrf-sistemy/' },
+    { '@type': 'ListItem', position: 4, name: 'Вентиляция Shuft', url: 'https://shuft.online/catalog/ventilyaciya/' },
+    { '@type': 'ListItem', position: 5, name: 'Аксессуары', url: 'https://shuft.online/catalog/aksessuary/' },
+    { '@type': 'ListItem', position: 6, name: 'Запчасти Shuft', url: 'https://shuft.online/catalog/zapchasti/' },
+  ],
+}
+
 const categories = [
   {
     title: 'Фанкойлы Shuft',
@@ -68,6 +92,9 @@ const categories = [
 
 export default function CatalogPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'Каталог' }]} />
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Каталог оборудования Shuft</h1>
@@ -117,5 +144,6 @@ export default function CatalogPage() {
         ))}
       </div>
     </div>
+    </>
   )
 }

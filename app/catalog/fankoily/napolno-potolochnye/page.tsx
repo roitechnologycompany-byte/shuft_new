@@ -9,6 +9,30 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Фанкойлы', item: 'https://shuft.online/catalog/fankoily/' },
+    { '@type': 'ListItem', position: 4, name: 'Напольно-потолочные', item: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Напольно-потолочные фанкойлы Shuft SFF',
+  url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shuft SFF-150 — 43 930 ₽', url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-150' },
+    { '@type': 'ListItem', position: 2, name: 'Shuft SFF-300 — 54 800 ₽', url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-300' },
+    { '@type': 'ListItem', position: 3, name: 'Shuft SFF-400 — 58 200 ₽', url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-400' },
+    { '@type': 'ListItem', position: 4, name: 'Shuft SFF-600 — 76 500 ₽', url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/sff-600' },
+  ],
+}
+
 const models = [
   { name: 'Shuft SFF-150', cooling: 1.6, heating: 2.4, airflow: 380, noise: 22, area: 16, price: 43930, inStock: true },
   { name: 'Shuft SFF-300', cooling: 2.8, heating: 4.2, airflow: 620, noise: 25, area: 28, price: 54800, inStock: true },
@@ -18,6 +42,9 @@ const models = [
 
 export default function NapolnoPotolochnyePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -113,5 +140,6 @@ export default function NapolnoPotolochnyePage() {
         ]}
       />
     </div>
+    </>
   )
 }

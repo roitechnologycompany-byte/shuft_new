@@ -77,6 +77,29 @@ const projects = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Проекты', item: 'https://shuft.online/projects/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Реализованные проекты монтажа Shuft в Москве',
+  url: 'https://shuft.online/projects/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Офис IT-компании, Петровка — 3 × SFH-800 V3, 185 000 ₽', url: 'https://shuft.online/projects/ofisy/' },
+    { '@type': 'ListItem', position: 2, name: 'Торговый центр, Комсомольский — 12 × SFR-1200F, 1 250 000 ₽', url: 'https://shuft.online/projects/torgovye-centry/' },
+    { '@type': 'ListItem', position: 3, name: 'Производственный цех, Люберцы — VRF + 6 блоков, 2 100 000 ₽', url: 'https://shuft.online/projects/proizvodstvo/' },
+    { '@type': 'ListItem', position: 4, name: 'Ресторан на Тверской — 4 × SFR-950F, 485 000 ₽', url: 'https://shuft.online/projects/restorany-i-cafe/' },
+    { '@type': 'ListItem', position: 5, name: 'Складской комплекс, Домодедово — 8 × канальных + 2 чиллера, 1 800 000 ₽', url: 'https://shuft.online/projects/skladskie-kompleksy/' },
+  ],
+}
+
 const typeColors: Record<string, string> = {
   'Офис': 'bg-blue-100 text-blue-700',
   'ТЦ': 'bg-purple-100 text-purple-700',
@@ -87,6 +110,9 @@ const typeColors: Record<string, string> = {
 
 export default function ProjectsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'Проекты' }]} />
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Реализованные проекты Shuft в Москве</h1>
@@ -158,5 +184,6 @@ export default function ProjectsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

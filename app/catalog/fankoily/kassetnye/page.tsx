@@ -10,6 +10,29 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/fankoily/kassetnye/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Фанкойлы', item: 'https://shuft.online/catalog/fankoily/' },
+    { '@type': 'ListItem', position: 4, name: 'Кассетные', item: 'https://shuft.online/catalog/fankoily/kassetnye/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Кассетные фанкойлы Shuft SFR',
+  url: 'https://shuft.online/catalog/fankoily/kassetnye/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shuft SFR-950F — 72 450 ₽', url: 'https://shuft.online/catalog/fankoily/kassetnye/sfr-950f' },
+    { '@type': 'ListItem', position: 2, name: 'Shuft SFR-1200F — 89 900 ₽', url: 'https://shuft.online/catalog/fankoily/kassetnye/sfr-1200f' },
+    { '@type': 'ListItem', position: 3, name: 'Shuft SFR-1500F — 118 500 ₽', url: 'https://shuft.online/catalog/fankoily/kassetnye/sfr-1500f' },
+  ],
+}
+
 const models = [
   { name: 'Shuft SFR-950F', cooling: 5.0, heating: 7.5, airflow: 950, noise: 30, area: 50, price: 72450, inStock: true },
   { name: 'Shuft SFR-1200F', cooling: 7.5, heating: 10.2, airflow: 1200, noise: 32, area: 75, price: 89900, inStock: true },
@@ -18,6 +41,9 @@ const models = [
 
 export default function KassetnyePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -130,5 +156,6 @@ export default function KassetnyePage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

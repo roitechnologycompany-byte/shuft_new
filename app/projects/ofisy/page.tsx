@@ -51,8 +51,34 @@ const projects = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Проекты', item: 'https://shuft.online/projects/' },
+    { '@type': 'ListItem', position: 3, name: 'Офисы', item: 'https://shuft.online/projects/ofisy/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Проекты монтажа фанкойлов в офисах Москвы',
+  url: 'https://shuft.online/projects/ofisy/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'IT-компания, Петровка — 3 × SFH-800 V3, 185 000 ₽' },
+    { '@type': 'ListItem', position: 2, name: 'Бизнес-центр, Пресненская наб. — VRF Shuft + 18 блоков, 3 400 000 ₽' },
+    { '@type': 'ListItem', position: 3, name: 'Юридическая фирма, Садовое — 2 × SFR-950F, 210 000 ₽' },
+    { '@type': 'ListItem', position: 4, name: 'Коворкинг, м. Курская — 4 × SFR-1200F, 540 000 ₽' },
+  ],
+}
+
 export default function OfisyProjectsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -135,5 +161,6 @@ export default function OfisyProjectsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

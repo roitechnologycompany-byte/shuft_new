@@ -51,8 +51,34 @@ const projects = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Проекты', item: 'https://shuft.online/projects/' },
+    { '@type': 'ListItem', position: 3, name: 'Рестораны и кафе', item: 'https://shuft.online/projects/restorany-i-cafe/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Проекты климат-контроля в ресторанах и кафе Москвы',
+  url: 'https://shuft.online/projects/restorany-i-cafe/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Ресторан на Тверской — 4 × SFR-950F, 485 000 ₽' },
+    { '@type': 'ListItem', position: 2, name: 'Кофейня, м. Арбатская — 2 × SFR-950F, 185 000 ₽' },
+    { '@type': 'ListItem', position: 3, name: 'Банкетный зал, Замоскворечье — 6 × SFR-1200F + чиллер, 940 000 ₽' },
+    { '@type': 'ListItem', position: 4, name: 'Фуд-корт в ТЦ — 10 × SFR-1500F + чиллер, 2 200 000 ₽' },
+  ],
+}
+
 export default function RestoranyCafeProjectsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -135,5 +161,6 @@ export default function RestoranyCafeProjectsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/vrf-sistemy/vneshnie-bloki/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'VRF-системы', item: 'https://shuft.online/catalog/vrf-sistemy/' },
+    { '@type': 'ListItem', position: 4, name: 'Внешние блоки', item: 'https://shuft.online/catalog/vrf-sistemy/vneshnie-bloki/' },
+  ],
+}
+
 const models = [
   {
     name: 'Shuft VRF-080',
@@ -55,6 +66,8 @@ const models = [
 
 export default function VneshnieBlokyVRFPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -210,5 +223,6 @@ export default function VneshnieBlokyVRFPage() {
         ]}
       />
     </div>
+    </>
   )
 }

@@ -8,6 +8,29 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/fankoily/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Фанкойлы', item: 'https://shuft.online/catalog/fankoily/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Фанкойлы Shuft — все типы',
+  url: 'https://shuft.online/catalog/fankoily/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Кассетные фанкойлы Shuft SFR', url: 'https://shuft.online/catalog/fankoily/kassetnye/' },
+    { '@type': 'ListItem', position: 2, name: 'Канальные фанкойлы Shuft SFF', url: 'https://shuft.online/catalog/fankoily/kanalnye/' },
+    { '@type': 'ListItem', position: 3, name: 'Настенные фанкойлы Shuft SFH', url: 'https://shuft.online/catalog/fankoily/nastennye/' },
+    { '@type': 'ListItem', position: 4, name: 'Напольно-потолочные фанкойлы Shuft', url: 'https://shuft.online/catalog/fankoily/napolno-potolochnye/' },
+  ],
+}
+
 const types = [
   {
     slug: 'kassetnye',
@@ -61,6 +84,9 @@ const types = [
 
 export default function FancoilsPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -162,5 +188,6 @@ export default function FancoilsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

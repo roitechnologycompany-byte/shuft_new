@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/fankoily/kanalnye/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Фанкойлы', item: 'https://shuft.online/catalog/fankoily/' },
+    { '@type': 'ListItem', position: 4, name: 'Канальные', item: 'https://shuft.online/catalog/fankoily/kanalnye/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Канальные фанкойлы Shuft SFF G50',
+  url: 'https://shuft.online/catalog/fankoily/kanalnye/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shuft SFF-300G50 — 42 180 ₽', url: 'https://shuft.online/catalog/fankoily/kanalnye/sff-300g50' },
+    { '@type': 'ListItem', position: 2, name: 'Shuft SFF-500G50 — 58 900 ₽', url: 'https://shuft.online/catalog/fankoily/kanalnye/sff-500g50' },
+    { '@type': 'ListItem', position: 3, name: 'Shuft SFF-800G50 — 79 500 ₽', url: 'https://shuft.online/catalog/fankoily/kanalnye/sff-800g50' },
+    { '@type': 'ListItem', position: 4, name: 'Shuft SFF-1400G50 — 124 000 ₽', url: 'https://shuft.online/catalog/fankoily/kanalnye/sff-1400g50' },
+  ],
+}
+
 const models = [
   { name: 'Shuft SFF-300G50', cooling: 2.8, heating: 4.2, airflow: 620, noise: 25, area: 28, price: 42180, inStock: true },
   { name: 'Shuft SFF-500G50', cooling: 4.5, heating: 6.8, airflow: 960, noise: 27, area: 45, price: 58900, inStock: true },
@@ -19,6 +43,9 @@ const models = [
 
 export default function KanalnyePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -118,5 +145,6 @@ export default function KanalnyePage() {
         ]}
       />
     </div>
+    </>
   )
 }

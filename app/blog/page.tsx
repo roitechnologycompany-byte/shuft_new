@@ -101,6 +101,34 @@ const articles = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Блог', item: 'https://shuft.online/blog/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Блог — экспертные статьи про фанкойлы Shuft',
+  url: 'https://shuft.online/blog/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Как выбрать фанкойл Shuft для офиса — полный гайд 2026', url: 'https://shuft.online/blog/kak-vybrat-fankoil' },
+    { '@type': 'ListItem', position: 2, name: 'Shuft vs Carrier vs Daikin — сравнение фанкойлов 2026', url: 'https://shuft.online/blog/shuft-vs-carrier-daikin' },
+    { '@type': 'ListItem', position: 3, name: 'Полный обзор настенных фанкойлов Shuft серии SFH V3', url: 'https://shuft.online/blog/nastennye-fankoily-sfh' },
+    { '@type': 'ListItem', position: 4, name: 'История бренда Shuft: от Дании до России', url: 'https://shuft.online/blog/istoriya-brenda-shuft' },
+    { '@type': 'ListItem', position: 5, name: 'Система чиллер-фанкойл Shuft: как это работает', url: 'https://shuft.online/blog/chiller-fankoil-sistema' },
+    { '@type': 'ListItem', position: 6, name: 'Установка фанкойла Shuft в офисе: пошаговая инструкция', url: 'https://shuft.online/blog/ustanovka-fankoila-v-ofise' },
+    { '@type': 'ListItem', position: 7, name: 'Энергоэффективность фанкойлов Shuft — сколько они экономят', url: 'https://shuft.online/blog/energoeffektivnost-shuft' },
+    { '@type': 'ListItem', position: 8, name: 'Уровень шума фанкойлов Shuft — насколько тихо?', url: 'https://shuft.online/blog/shum-fankoila' },
+    { '@type': 'ListItem', position: 9, name: 'VRF-системы Shuft: что это и когда они нужны', url: 'https://shuft.online/blog/vrf-sistema-chto-eto' },
+    { '@type': 'ListItem', position: 10, name: 'Как выбрать фанкойл Shuft для магазина — советы экспертов', url: 'https://shuft.online/blog/kak-vybrat-dlya-magazina' },
+  ],
+}
+
 const categoryColors: Record<string, string> = {
   'Подбор оборудования': 'bg-blue-100 text-blue-700',
   'Сравнения': 'bg-purple-100 text-purple-700',
@@ -114,6 +142,9 @@ const categoryColors: Record<string, string> = {
 
 export default function BlogPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'Блог' }]} />
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Блог — экспертные статьи про фанкойлы Shuft</h1>
@@ -155,5 +186,6 @@ export default function BlogPage() {
         ))}
       </div>
     </div>
+    </>
   )
 }

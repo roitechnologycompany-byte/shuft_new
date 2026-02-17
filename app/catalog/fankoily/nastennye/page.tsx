@@ -10,6 +10,29 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/catalog/fankoily/nastennye/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Каталог', item: 'https://shuft.online/catalog/' },
+    { '@type': 'ListItem', position: 3, name: 'Фанкойлы', item: 'https://shuft.online/catalog/fankoily/' },
+    { '@type': 'ListItem', position: 4, name: 'Настенные', item: 'https://shuft.online/catalog/fankoily/nastennye/' },
+  ],
+}
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Настенные фанкойлы Shuft SFH V3',
+  url: 'https://shuft.online/catalog/fankoily/nastennye/',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shuft SFH-500 V3 — 56 960 ₽', url: 'https://shuft.online/catalog/fankoily/nastennye/sfh-500-v3' },
+    { '@type': 'ListItem', position: 2, name: 'Shuft SFH-800 V3 — 74 500 ₽', url: 'https://shuft.online/catalog/fankoily/nastennye/sfh-800-v3' },
+    { '@type': 'ListItem', position: 3, name: 'Shuft SFH-1200 V3 — 98 900 ₽', url: 'https://shuft.online/catalog/fankoily/nastennye/sfh-1200-v3' },
+  ],
+}
+
 const models = [
   {
     slug: 'sfh-500-v3',
@@ -66,6 +89,9 @@ const models = [
 
 export default function NastenniyePage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
     <div className="max-w-7xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -213,5 +239,6 @@ export default function NastenniyePage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
