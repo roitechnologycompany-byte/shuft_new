@@ -7,8 +7,19 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/privacy-policy/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Политика конфиденциальности', item: 'https://shuft.online/privacy-policy/' },
+  ],
+}
+
 export default function PrivacyPolicyPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[{ name: 'Главная', href: '/' }, { name: 'Политика конфиденциальности' }]} />
       <h1 className="text-3xl font-bold text-gray-900 mb-8">Политика конфиденциальности</h1>
@@ -27,5 +38,6 @@ export default function PrivacyPolicyPage() {
         <p>По вопросам обработки персональных данных: <a href="mailto:info@shuft.online" className="text-blue-600">info@shuft.online</a>, тел. <a href="tel:+74951203375" className="text-blue-600">+7 (495) 120-33-75</a></p>
       </div>
     </div>
+    </>
   )
 }

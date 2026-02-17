@@ -7,8 +7,19 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://shuft.online/offer/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: 'https://shuft.online/' },
+    { '@type': 'ListItem', position: 2, name: 'Публичная оферта', item: 'https://shuft.online/offer/' },
+  ],
+}
+
 export default function OfferPage() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumbs items={[
         { name: 'Главная', href: '/' },
@@ -138,5 +149,6 @@ export default function OfferPage() {
 
       </div>
     </div>
+    </>
   )
 }
